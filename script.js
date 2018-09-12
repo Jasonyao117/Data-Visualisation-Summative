@@ -20,8 +20,10 @@ $(function(){
 	var offset5 = $('.section4').offset().top;
 
 	$(document).on('scroll',function(){
+		
 
 		var iScrollTop = $(document).scrollTop();
+		console.log(iScrollTop);
 
 		var activeLi;
 		if(iScrollTop>=offset1-100 && iScrollTop<offset2){
@@ -41,6 +43,19 @@ $(function(){
 		}
 		activeLi.addClass('active');
 		$('.menu>li').not(activeLi).removeClass('active');
+
+		if(iScrollTop>=424){
+          $('.container a').css('color','black');
+          $('.designerList li a').css('color','black');
+          
+		}else{
+			$('.container a').css('color','white');
+			$('.designerList li a').css('color','white');
+		}
+
+		// ++++
+
+
 
 	});
 

@@ -1,5 +1,5 @@
 #mainNav {
-  background-color: $gray-900;
+  // background-color: $gray-900;
   .navbar-toggler {
     font-size: 12px;
     right: 0;
@@ -36,12 +36,17 @@
       }
 
       .designerList{
+        color:white;
         position: absolute;
         top: 60px;
         width: 40%;
         left: 80px;
         list-style-type:none;
         display: none;
+      }
+
+      .designerList>li>a{
+        color:white;
       }
 
       &:hover .designerList{
