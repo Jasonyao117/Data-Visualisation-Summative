@@ -17,30 +17,37 @@
 				list-style-type:none;
 			}
 		}
-		.profile{
-			position:absolute;
-			display:block;
+		// .profile{
+			
+		// }
+		// .works{
+		// 	position:absolute;
+		// 	top:-200;
+		// 	display:block;
+		// 	// border:1px red solid;
+		// 	width:100%;
+		// 	background-color:rgba(0,0,0,0.2);
+		// }
+		// .skills{
+		// 	position:absolute;
+		// 	top:-200;
+		// 	display:block;
+		// 	border:1px red solid;
+		// 	width:100px;
+		//     height:200px;
+		// 	background-color:rgba(0,0,0,0.5);
+		// }
+
+		.tab-content{
 			border:1px red solid;
-			width:100px;
-		    height:200px;
-			background-color:red;
-		}
-		.works{
-			position:absolute;
-			top:-200;
-			display:block;
-			// border:1px red solid;
-			width:100%;
-			background-color:rgba(0,0,0,0.2);
-		}
-		.skills{
-			position:absolute;
-			top:-200;
-			display:block;
-			border:1px red solid;
-			width:100px;
-		    height:200px;
-			background-color:rgba(0,0,0,0.5);
+			position:relative;
+
+			.tab-pane{
+				position:absolute;
+				top:0;
+				border:1px green solid;
+			}
 		}
 	}
+
 }
