@@ -11,6 +11,7 @@
 		background-color:white;
 		box-shadow:8px 8px 20px 5px;
 		.nav{
+			margin-top:2em;
 			.site-tab-nav{
 				border: 1px red solid;
 				position:absolute;
@@ -18,7 +19,7 @@
 			}
 		}
 		// .profile{
-			
+
 		// }
 		// .works{
 		// 	position:absolute;
@@ -39,7 +40,6 @@
 		// }
 
 		.tab-content{
-			border:1px red solid;
 			position:relative;
 
 			.tab-pane{
