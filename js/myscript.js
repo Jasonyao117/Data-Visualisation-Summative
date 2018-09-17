@@ -1,3 +1,4 @@
+//works
 $(function(){
 	console.log("hi");
 	let key = 'SoHrJ7hCREJMhtXKdvUOGhmKGNdXp6be';
@@ -79,15 +80,10 @@ $(function(){
 			}
 	    });
 	}
-	
+
 	getUserDetails('melkhiah');
 	getUserDetails('blugraphic');
 	getUserDetails('MartaBevacqua');
 	getUserDetails('kline_DS');
-
-
-
-	
-
 
 });
