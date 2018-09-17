@@ -1,0 +1,46 @@
+.cover_1{
+	#headerWrap{
+		width:90%;
+		height:98vh;
+		background-image: linear-gradient(to right, #13D6D2 , #FEC909);
+		margin:auto;
+		margin-top: 2vh;
+
+		#hero{
+           width:80%;
+           height: 84vh;
+           position: absolute;
+           bottom: 0;
+           left: 0;
+           right: 0;
+           margin:auto;
+           background-color: white;
+           box-shadow: 0 0 30px #6E6F6F;
+           display: flex;
+           align-items: center;
+
+           h2{
+           	margin: auto;
+           	font-family: $font-family-sans-serif;
+           }
+
+		}
+	}
+
+	.triangle{
+			position: absolute;
+			z-index: 90;
+			top: 40.5vh;
+		}
+
+    .triangle.left{
+    	left: 0;
+    }
+    .triangle.right{
+    	right: 0;
+    }
+
+    header{
+    	z-index: 100;
+    }
+}
