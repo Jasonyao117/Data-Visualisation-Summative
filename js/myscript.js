@@ -1,6 +1,6 @@
 //works
 $(function(){
-	console.log("hi");
+	// console.log("hi");
 	let key = 'SoHrJ7hCREJMhtXKdvUOGhmKGNdXp6be';
 
 	let projectHTML = $('#templateProject').text();
