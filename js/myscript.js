@@ -1,6 +1,7 @@
 //works
 $(function(){
-	let key = '5LD1TzsJTngQ7kWNRCsMtTzgCTYUeKKM';
+	// let key = '5LD1TzsJTngQ7kWNRCsMtTzgCTYUeKKM';
+	let key = 'OYfT28SqRnMg4IICU3k0v0XHocyLvIHm';
 
 	let projectHTML = $('#templateProject').text();
 	let projectTemplate = Template7(projectHTML).compile();
@@ -82,7 +83,7 @@ $(function(){
 
 	getUserDetails('melkhiah');
 	getUserDetails('blugraphic');
-	getUserDetails('MartaBevacqua');
+	getUserDetails('angelinaout');
 	getUserDetails('kline_DS');
 
 
@@ -111,9 +112,9 @@ $(function(){
 	    });
 	}
 
-	getProfileDetails('melkhiah','.designer-profile1');
-	getProfileDetails('blugraphic','.designer-profile2');
-	getProfileDetails('MartaBevacqua','.designer-profile3');
-	getProfileDetails('kline_DS','.designer-profile4');
+	getProfileDetails('melkhiah','.designer-profile');
+	getProfileDetails('blugraphic','.designer-profile1');
+	getProfileDetails('angelinaout','.designer-profile2');
+	getProfileDetails('kline_DS','.designer-profile3');
 
 });
