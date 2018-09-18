@@ -1,7 +1,6 @@
 //works
 $(function(){
-	console.log("hi");
-	let key = 'SoHrJ7hCREJMhtXKdvUOGhmKGNdXp6be';
+	let key = 'n1qC8SlzYQmzGrZqAP9NoVoWvKHGFjHT';
 
 	let projectHTML = $('#templateProject').text();
 	let projectTemplate = Template7(projectHTML).compile();
@@ -85,5 +84,36 @@ $(function(){
 	getUserDetails('blugraphic');
 	getUserDetails('MartaBevacqua');
 	getUserDetails('kline_DS');
+
+
+	//profile
+	let templateProfileHTML = $('#templateProfile').text();
+	let templateProfileTemplate = Template7(templateProfileHTML).compile();
+
+	function getProfileDetails(username,selector){
+
+		let urlUser = 'https://api.behance.net/v2/users/'+username+'?client_id=' + key;
+
+		$.ajax({
+			url:urlUser,
+			dataType:'jsonp',
+			success:function(res){
+		
+				var user = res.user;
+				// _(res.projects).each(function(project){
+				console.log(user);
+
+				let output = templateProfileTemplate(user);
+				$(selector).append(output);
+					
+				// });
+			}
+	    });
+	}
+
+	getProfileDetails('melkhiah','.designer-profile1');
+	getProfileDetails('blugraphic','.designer-profile2');
+	getProfileDetails('MartaBevacqua','.designer-profile3');
+	getProfileDetails('kline_DS','.designer-profile4');
 
 });
