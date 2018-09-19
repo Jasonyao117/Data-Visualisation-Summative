@@ -68,6 +68,31 @@ $(function(){
 		$('html,body').animate({scrollTop:targetOffsetTop},1000);
 	});
 
+var width = $(window).width();
+$(window).on('resize', function(){
+   if($(this).width() != width ){
+      width = $(this).width();
+       
+       var iwidth = width/100;
+       console.log(iwidth);
+      if (iwidth<=15.74) {
+         $('.triangle.left , .triangle.right').css({
+           width: iwidth*35,
+         });
+      }else{
+      	$('.triangle.left , .triangle.right').css({
+           width: 547.75,
+         });
+      };
+      
+      if (iwidth<=7.32){
+      	$('.triangle').hide()
+      }else{
+      	$('.triangle').show()
+      }
+
+   };
+});
 
 
 });
