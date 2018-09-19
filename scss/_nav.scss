@@ -92,3 +92,25 @@
     }
   }
 }
+
+.site-footer{
+  background-image: linear-gradient(white, #D9D9D9);
+  padding:80px 0 !important;
+  .row{
+    width: 90%;
+    margin: auto;
+    .left,.middle{
+      width: 300px;
+      margin: auto;
+    }
+      .right{
+      width: 350px;
+      margin: auto;
+    }
+  }
+}
+
+#imap{
+   height: 350px;
+   z-index: 200;
+}
