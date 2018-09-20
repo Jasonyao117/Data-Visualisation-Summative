@@ -21,13 +21,14 @@
 			.designerName{
 				h1:first-letter{
 					color:$orange;
-					font-size:2.5em;
+					font-size:$title-size;
 					padding-rignt:5px;
 					text-transform:uppercase;
+
 				}
 			}
 			.photo{
-				border:1px $orange solid;
+				// border:1px $orange solid;
 			}
 			.introduction{
 
