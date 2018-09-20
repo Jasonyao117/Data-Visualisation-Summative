@@ -1,13 +1,13 @@
 #mainNav {
   // background-color: $gray-900;
   .navbar-toggler {
-    font-size: 12px;
+    z-index: 999;
+    font-size: 30px;
     right: 0;
     // padding: 13px;
     text-transform: uppercase;
     color: white;
     border: 0;
-    background-color: $primary;
     // @include heading-font;
   }
   .navbar-brand {
@@ -57,11 +57,15 @@
   }
 }
 
-
+.site-header{
+  padding-bottom:24px !important;
+  padding-top: 30px !important;
+  background-color: rgba(255,255,255,0.4);
+}
 
 @media(min-width:992px) {
   #mainNav {
-    padding-top: 25px;
+    padding-top: 20px;
     padding-bottom: 25px;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
