@@ -1,7 +1,6 @@
 .main-wrap{
 	background-image: url(../background/0.png);
 }
-
 .section2{
 	.container{
 		width:100%;
@@ -11,6 +10,7 @@
 		background-color:white;
 		box-shadow:8px 8px 20px 5px;
 		.nav{
+			margin-top:2em;
 			.site-tab-nav{
 				border: 1px red solid;
 				position:absolute;
@@ -18,29 +18,52 @@
 			}
 		}
 		.profile{
-			position:absolute;
-			display:block;
-			border:1px red solid;
-			width:100px;
-		    height:200px;
-			background-color:red;
+			.designerName{
+				h1:first-letter{
+					color:$orange;
+					font-size:2.5em;
+					padding-rignt:5px;
+					text-transform:uppercase;
+				}
+			}
+			.photo{
+				border:1px $orange solid;
+			}
+			.introduction{
+
+			}
 		}
-		.works{
-			position:absolute;
-			top:-200;
-			display:block;
-			// border:1px red solid;
-			width:100%;
-			background-color:rgba(0,0,0,0.2);
+		.tab-content{
+			position:relative;
+			.tab-pane{
+				position:absolute;
+				top:0;
+				width:100%;
+			}
 		}
-		.skills{
-			position:absolute;
-			top:-200;
-			display:block;
-			border:1px red solid;
-			width:100px;
-		    height:200px;
-			background-color:rgba(0,0,0,0.5);
+	}
+}
+@media only screen and (min-width:50em){
+	.section2{
+		.container{
+			.profile{
+				.designerName{
+					left:-10%;
+					margin-top:30%;
+				}
+				.photo{
+					position:absolute;
+					top:20%;
+					left:33%;
+					box-shadow:8px 8px 20px 5px;
+				}
+				.introduction{
+					position:absolute;
+					top:45%;
+					right:-15%;
+				}
+			}
+			
 		}
 	}
 }

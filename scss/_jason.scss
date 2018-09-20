@@ -31,13 +31,17 @@
 			position: absolute;
 			z-index: 90;
 			top: 40.5vh;
+      opacity: 0.95;
+      
 		}
 
     .triangle.left{
     	left: 0;
+      
     }
     .triangle.right{
     	right: 0;
+
     }
 
     header{

@@ -68,6 +68,39 @@ $(function(){
 		$('html,body').animate({scrollTop:targetOffsetTop},1000);
 	});
 
+var width = $(window).width();
+$(window).on('resize', function(){
+   if($(this).width() != width ){
+      width = $(this).width();
+       
+       var iwidth = width/100;
+       console.log(iwidth);
+      if (iwidth<=15.74) {
+         $('.triangle.left , .triangle.right').css({
+           width: iwidth*35,
+         });
+      }else{
+      	$('.triangle.left , .triangle.right').css({
+           width: 547.75,
+         });
+      };
+      
+      if (iwidth<=7.32){
+      	$('.triangle').hide()
+      }else{
+      	$('.triangle').show()
+      }
+
+   };
+});
+
+
+	var center ={lat:-36.842744,lng:174.766994};
+    var map = L.map('imap').setView(center,17);
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoidGhhbHl4OTAiLCJhIjoiY2o2YjdrZHRlMWJmYjJybDd2cW1rYnVnNSJ9.j_DQLfixHfhioVjH6qmqkw').addTo(map);
+
+    var marker = L.marker(center).addTo(map);
 
 
 });
