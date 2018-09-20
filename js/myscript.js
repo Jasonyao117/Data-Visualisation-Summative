@@ -3,6 +3,7 @@ $(function(){
 	// let key = 'OYfT28SqRnMg4IICU3k0v0XHocyLvIHm';
 	let key = 'n1qC8SlzYQmzGrZqAP9NoVoWvKHGFjHT';
 	
+
 	
 	//works
 	let projectHTML = $('#templateProject').text();
