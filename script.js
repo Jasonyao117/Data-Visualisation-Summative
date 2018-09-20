@@ -47,10 +47,13 @@ $(function(){
 		if(iScrollTop>=424){
           $('.container a').css('color','black');
           $('.designerList li a').css('color','black');
+          $('.navbar-toggler').css('color','black');
           
 		}else{
-			$('.container a').css('color','white');
-			$('.designerList li a').css('color','white');
+		  $('.container a').css('color','white');
+		  $('.designerList li a').css('color','white');
+		  $('.navbar-toggler').css('color','white');
+
 		}
 
 		// ++++
@@ -89,6 +92,12 @@ $(window).on('resize', function(){
       	$('.triangle').hide()
       }else{
       	$('.triangle').show()
+      }
+
+      if(iwidth<=9.8){
+      	$('.navbar-nav>li>a').css('color','black');
+      }else{
+      	$('.navbar-nav>li>a').css('color','white');
       }
 
    };

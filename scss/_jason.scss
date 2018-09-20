@@ -1,13 +1,12 @@
 .cover_1{
 	#headerWrap{
-		width:90%;
+		width:100vw;
 		height:98vh;
 		background-image: linear-gradient(to right, #13D6D2 , #FEC909);
 		margin:auto;
-		margin-top: 2vh;
 
 		#hero{
-           width:80%;
+           width:90%;
            height: 84vh;
            position: absolute;
            bottom: 0;
@@ -44,7 +43,5 @@
 
     }
 
-    header{
-    	z-index: 100;
-    }
+    
 }
