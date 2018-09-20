@@ -249,12 +249,6 @@ AOS.init({
     }
   });
 
-  $('#date').datepicker({
-    'format': 'm/d/yyyy',
-    'autoclose': true
-  });
-  $('#time').timepicker();
-
 
   //------- Google Map  js --------//  
 
