@@ -8,5 +8,28 @@ var skills = [
 
 makeBarChart(skills,{
 	width:400,
+	selector:'#barChartA',
 
 });
+
+makeBarChart(skills,{
+	width:400,
+	selector:'#barChartB',
+
+});
+
+makeBarChart(skills,{
+	width:400,
+	selector:'#barChartC',
+
+});
+
+makeBarChart(skills,{
+	width:400,
+	selector:'#barChartD',
+
+});
+
+// makeDonutChart("#donutChartA");
+
+// makeDonutChart("#donutChartB");

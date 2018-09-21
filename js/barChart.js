@@ -1,5 +1,4 @@
 function makeBarChart(data,options){
-
 	var config = {	
 		width:600,
 		height: 400,
@@ -81,3 +80,4 @@ function makeBarChart(data,options){
 		tooltip.attr('transform','translate('+xPos+','+yPos+')');
 	});
 }
+
