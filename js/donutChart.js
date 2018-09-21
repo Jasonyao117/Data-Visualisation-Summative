@@ -97,9 +97,12 @@ datasetOption2 = [
         {label:type_objets_PartDieu_light[7], value:dataPartDieu_sort_light[7]},
         ];
 
+
+
+
 d3.selectAll("input")
   .on("change", selectDataset);
-  
+
 function selectDataset()
 {
   change(datasetOption1);
@@ -224,6 +227,7 @@ function change(data) {
         .remove();
 };
 
+$('#dataset1').trigger('click');
 
 // donut-chart
     var width = 300,
