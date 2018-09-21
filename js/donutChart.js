@@ -223,3 +223,291 @@ function change(data) {
     polyline.exit()
         .remove();
 };
+
+
+// donut-chart
+    var width = 300,
+        height = 300,
+        margin = 30;
+
+    var titles = [
+        {name:'Graphic Design',amount:6},
+        {name:'Front-end',amount:8},
+        {name:'Back-end',amount:5},
+        {name:'Animation',amount:1}
+
+    ];
+    var pieDataGen = d3.pie()
+                        .sort(null)// don't sort the data by some rules like from the highst to the lowest
+                        .value(d => d.amount);
+
+    var pieData = pieDataGen(titles);
+
+    var radius = Math.min(width,height)/2; //common practise
+
+    var arcGen = d3.arc()
+                    .outerRadius(radius)
+                    .innerRadius(radius/2)
+
+    var colGen = d3.scaleOrdinal(['#1172B9','#4EC291','#1172B9','#F28B02']);
+
+    var pieChart = d3.select('#donutChartB')
+                .attr('viewBox','0 0 '+(width+margin*2)+' '+(height+margin*2))
+                .append('g')
+                .attr('transform','translate('+margin+','+margin+')');
+
+    var arcGroup = pieChart.append('g')
+                    .attr('transform','translate('+radius+','+radius+')');//move the pie from the topleft to the center
+
+    arcGroup.selectAll('.arc')//
+        .data(pieData)
+        .enter()
+        .append('path')
+        .attr('id',d=>d.data.name)//give each arc an id
+        .attr('class','arc')
+        .attr('d',arcGen)
+        .attr('fill',d =>colGen(d.data.name));
+
+
+    arcGroup.selectAll('text')
+        .data(pieData)
+        .enter()
+        .append('text')
+        .style('font-size','0.5em')
+        .attr('fill','white')
+        .attr('text-anchor','middle')
+        .attr('alignment-base','middle')
+        .attr('transform',d => 'translate('+arcGen.centroid(d)+')')
+        .text(d => d.data.name);
+
+    d3.select('path#Wimbledon Open')
+        .style("filter", "url(#drop-shadow)");
+
+
+
+
+    // Titiles
+    // shadow
+    var defs = pieChart.append("defs");
+    var filter = defs.append("filter")
+        .attr("id", "drop-shadow")
+        .attr("height", "130%");
+    filter.append("feGaussianBlur")
+        .attr("in", "SourceAlpha")
+        .attr("stdDeviation",8)
+        .attr("result", "blur");
+    filter.append("feOffset")
+        .attr("in", "blur")
+        .attr("dx", 0)
+        .attr("dy", 0)
+        .attr("result", "offsetBlur");
+    var feMerge = filter.append("feMerge");
+
+    feMerge.append("feMergeNode")
+        .attr("in", "offsetBlur")
+    feMerge.append("feMergeNode")
+        .attr("in", "SourceGraphic");
+
+    //circle
+    var circleArc1 = d3.arc()
+        .outerRadius(radius )
+        .innerRadius(radius );
+
+    pieChart.append('circle')
+            .attr('r','75')
+            .attr('cx', '150')
+            .attr('cy', '150')
+            .style("filter", "url(#drop-shadow)")
+            .style('fill', 'white');
+
+
+// donut-chart
+    var width = 300,
+        height = 300,
+        margin = 30;
+
+    var titles = [
+        {name:'Graphic Design',amount:6},
+        {name:'Front-end',amount:8},
+        {name:'Back-end',amount:5},
+        {name:'Animation',amount:1}
+
+    ];
+    var pieDataGen = d3.pie()
+                        .sort(null)// don't sort the data by some rules like from the highst to the lowest
+                        .value(d => d.amount);
+
+    var pieData = pieDataGen(titles);
+
+    var radius = Math.min(width,height)/2; //common practise
+
+    var arcGen = d3.arc()
+                    .outerRadius(radius)
+                    .innerRadius(radius/2)
+
+    var colGen = d3.scaleOrdinal(['#1172B9','#4EC291','#1172B9','#F28B02']);
+
+    var pieChart = d3.select('#donutChartC')
+                .attr('viewBox','0 0 '+(width+margin*2)+' '+(height+margin*2))
+                .append('g')
+                .attr('transform','translate('+margin+','+margin+')');
+
+    var arcGroup = pieChart.append('g')
+                    .attr('transform','translate('+radius+','+radius+')');//move the pie from the topleft to the center
+
+    arcGroup.selectAll('.arc')//
+        .data(pieData)
+        .enter()
+        .append('path')
+        .attr('id',d=>d.data.name)//give each arc an id
+        .attr('class','arc')
+        .attr('d',arcGen)
+        .attr('fill',d =>colGen(d.data.name));
+
+
+    arcGroup.selectAll('text')
+        .data(pieData)
+        .enter()
+        .append('text')
+       .style('font-size','0.5em')
+        .attr('fill','white')
+        .attr('text-anchor','middle')
+        .attr('alignment-base','middle')
+        .attr('transform',d => 'translate('+arcGen.centroid(d)+')')
+        .text(d => d.data.name);
+
+    d3.select('path#Wimbledon Open')
+        .style("filter", "url(#drop-shadow)");
+
+
+
+
+    // Titiles
+    // shadow
+    var defs = pieChart.append("defs");
+    var filter = defs.append("filter")
+        .attr("id", "drop-shadow")
+        .attr("height", "130%");
+    filter.append("feGaussianBlur")
+        .attr("in", "SourceAlpha")
+        .attr("stdDeviation",8)
+        .attr("result", "blur");
+    filter.append("feOffset")
+        .attr("in", "blur")
+        .attr("dx", 0)
+        .attr("dy", 0)
+        .attr("result", "offsetBlur");
+    var feMerge = filter.append("feMerge");
+
+    feMerge.append("feMergeNode")
+        .attr("in", "offsetBlur")
+    feMerge.append("feMergeNode")
+        .attr("in", "SourceGraphic");
+
+    //circle
+    var circleArc1 = d3.arc()
+        .outerRadius(radius )
+        .innerRadius(radius );
+
+    pieChart.append('circle')
+            .attr('r','75')
+            .attr('cx', '150')
+            .attr('cy', '150')
+            .style("filter", "url(#drop-shadow)")
+            .style('fill', 'white');
+
+
+// donut-chart
+    var width = 300,
+        height = 300,
+        margin = 30;
+
+    var titles = [
+        {name:'Graphic Design',amount:6},
+        {name:'Front-end',amount:8},
+        {name:'Back-end',amount:5},
+        {name:'Animation',amount:1}
+
+    ];
+    var pieDataGen = d3.pie()
+                        .sort(null)// don't sort the data by some rules like from the highst to the lowest
+                        .value(d => d.amount);
+
+    var pieData = pieDataGen(titles);
+
+    var radius = Math.min(width,height)/2; //common practise
+
+    var arcGen = d3.arc()
+                    .outerRadius(radius)
+                    .innerRadius(radius/2)
+
+    var colGen = d3.scaleOrdinal(['#1172B9','#4EC291','#1172B9','#F28B02']);
+
+    var pieChart = d3.select('#donutChartD')
+                .attr('viewBox','0 0 '+(width+margin*2)+' '+(height+margin*2))
+                .append('g')
+                .attr('transform','translate('+margin+','+margin+')');
+
+    var arcGroup = pieChart.append('g')
+                    .attr('transform','translate('+radius+','+radius+')');//move the pie from the topleft to the center
+
+    arcGroup.selectAll('.arc')//
+        .data(pieData)
+        .enter()
+        .append('path')
+        .attr('id',d=>d.data.name)//give each arc an id
+        .attr('class','arc')
+        .attr('d',arcGen)
+        .attr('fill',d =>colGen(d.data.name));
+
+
+    arcGroup.selectAll('text')
+        .data(pieData)
+        .enter()
+        .append('text')
+        .style('font-size','0.5em')
+        .attr('fill','white')
+        .attr('text-anchor','middle')
+        .attr('alignment-base','middle')
+        .attr('transform',d => 'translate('+arcGen.centroid(d)+')')
+        .text(d => d.data.name);
+
+    d3.select('path#Wimbledon Open')
+        .style("filter", "url(#drop-shadow)");
+
+
+
+
+    // Titiles
+    // shadow
+    var defs = pieChart.append("defs");
+    var filter = defs.append("filter")
+        .attr("id", "drop-shadow")
+        .attr("height", "130%");
+    filter.append("feGaussianBlur")
+        .attr("in", "SourceAlpha")
+        .attr("stdDeviation",8)
+        .attr("result", "blur");
+    filter.append("feOffset")
+        .attr("in", "blur")
+        .attr("dx", 0)
+        .attr("dy", 0)
+        .attr("result", "offsetBlur");
+    var feMerge = filter.append("feMerge");
+
+    feMerge.append("feMergeNode")
+        .attr("in", "offsetBlur")
+    feMerge.append("feMergeNode")
+        .attr("in", "SourceGraphic");
+
+    //circle
+    var circleArc1 = d3.arc()
+        .outerRadius(radius )
+        .innerRadius(radius );
+
+    pieChart.append('circle')
+            .attr('r','75')
+            .attr('cx', '150')
+            .attr('cy', '150')
+            .style("filter", "url(#drop-shadow)")
+            .style('fill', 'white');
