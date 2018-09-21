@@ -60,10 +60,21 @@
 				font: 12px sans-serif;
 			}
 		}
-		.barChart{
+		#barChartA{
 			flex: 0 0 50%;
-			// border: 1px red solid;
 			margin-left: 8.7%;
+		}
+		#barChartB{
+			flex: 0 0 40%;
+			margin-left: -12%;
+		}
+		#barChartC{
+			flex: 0 0 50%;
+			margin-left: 8.7%;
+		}
+		#barChartD{
+			flex: 0 0 40%;
+			margin-left: -12%;
 		}
 
 	}
