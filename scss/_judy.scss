@@ -11,12 +11,20 @@
 	height: 200px;
 	overflow:hidden;
 
+	.portfolio-image{
+		padding-top:75%;
+		background-size: cover;
+		background-position: center;
+		box-shadow: 3px 3px 5px 2px gray;
+	}
+
 }
 .projectname{
 	font-size: 14px;
 	padding-top: 10px;
 }
 
-.workimg{
-	box-shadow: 3px 3px 5px 2px gray;
+.tab-pane.fade.show {
+ 
+    z-index: 10;
 }
