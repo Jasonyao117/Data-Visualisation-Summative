@@ -48,11 +48,15 @@ $(function(){
           $('.container a').css('color','black');
           $('.designerList li a').css('color','black');
           $('.navbar-toggler').css('color','black');
+          $('.site-logo').empty();
+          $('.site-logo').prepend('<img src="background/logo.png" alt="" height="40">');
           
 		}else{
 		  $('.container a').css('color','white');
 		  $('.designerList li a').css('color','white');
 		  $('.navbar-toggler').css('color','white');
+		  $('.site-logo').empty();
+          $('.site-logo').prepend('<img src="background/logoWhite.png" alt="" height="40">');
 
 		}
 
