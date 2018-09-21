@@ -1,6 +1,13 @@
 .main-wrap{
 	background-image: url(../background/0.png);
 }
+.header-text{
+	padding:0 1.5rem;
+	margin-top:-100px;
+	h1{
+		font-family:$heading-font;
+	}
+}
 .section2{
 	.container{
 		width:100%;
@@ -21,9 +28,10 @@
 			.designerName{
 				h1:first-letter{
 					color:$orange;
-					font-size:2.5em;
+					font-size:$title-size;
 					padding-rignt:5px;
 					text-transform:uppercase;
+
 				}
 			}
 			.photo{
@@ -44,6 +52,24 @@
 	}
 }
 @media only screen and (min-width:50em){
+	.header-text{
+		z-index:999;
+		margin-left:200px;
+		strong{
+			font-size:$title-size;
+		}
+		p{
+			margin-top:-40px;
+			padding-left:0.6em;
+		}
+	}
+	.header-image{
+		margin-left:-200px;
+		width:50%;
+		height:500px;
+		background-image: url(../background/header.jpg);
+		box-shadow:8px 8px 20px 5px;
+	}
 	.section2{
 		.container{
 			.profile{
