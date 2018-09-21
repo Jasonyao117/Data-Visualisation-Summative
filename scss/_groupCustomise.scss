@@ -1,10 +1,8 @@
 //font
-@mixin body-font {
-  font-family: 'Roboto', sans-serif;
-}
-@mixin heading-font {
-  font-family: 'Montserrat', sans-serif;
-}
+$body-font: 'Roboto', sans-serif;
+
+$heading-font: 'Montserrat', sans-serif;
+
 
 // Colors
 $yellow: #FDEB25;
@@ -13,4 +11,6 @@ $blue: #13D6D2;
 $red: #D34500;
 $green: #0D3944;
 
-
+//font size
+$title-size: 2.5em;
+$text-size: 1.5em;

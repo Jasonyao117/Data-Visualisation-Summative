@@ -1,6 +1,8 @@
 $(function(){
-	let key = '5LD1TzsJTngQ7kWNRCsMtTzgCTYUeKKM';
+	// let key = '5LD1TzsJTngQ7kWNRCsMtTzgCTYUeKKM';
 	// let key = 'OYfT28SqRnMg4IICU3k0v0XHocyLvIHm';
+	let key = 'REcMwpYUbD95giMsJ20juYVPQBV2H3QI';
+
 	
 	//works
 	let projectHTML = $('#templateProject').text();
@@ -18,7 +20,7 @@ $(function(){
 			success:function(res){
 			// console.log(res);
 			var items;
-			for(var index = 0; index < 8; index++)
+			for(var index = 0; index < 6; index++)
 			{
 				let output = projectTemplate(res.projects[index]);
 				$(selector).append(output);

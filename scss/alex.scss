@@ -1,0 +1,71 @@
+.skills{
+	h1{
+	margin-top:-3%;
+	display: inline-block;
+	}
+	h1:first-letter{
+		color:orange;
+		font-size:2.5em;
+		padding-rignt:5px;
+		text-transform:uppercase;
+	}
+	form{
+		margin-top: -2%;
+	}
+	.charts{
+		margin-top: -2%;
+		display: flex;
+		width:180%;
+		margin-left: -20%;
+		.donutChart{
+			flex: 0 0 60%;
+			// border: 1px blue solid;
+			height:450px;
+			width: 150%;
+
+			path.slice{
+				stroke-width:2px;
+			}
+
+			polyline{
+				opacity: .3;
+				stroke: black;
+				stroke-width: 2px;
+				fill: none;
+			}
+
+			.labelValue
+			{
+				font-size: 60%;
+				opacity: .5;
+
+			}
+
+			.toolTip {
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				position: absolute;
+				display: none;
+				width: auto;
+				height: auto;
+				background: none repeat scroll 0 0 white;
+				border: 0 none;
+				border-radius: 8px 8px 8px 8px;
+				box-shadow: -3px 3px 15px #888888;
+				color: black;
+				font: 12px sans-serif;
+				padding: 5px;
+				text-align: center;
+			}
+			text {
+				font: 12px sans-serif;
+			}
+		}
+		.barChart{
+			flex: 0 0 50%;
+			// border: 1px red solid;
+			margin-left: 8.7%;
+		}
+
+	}
+
+}
