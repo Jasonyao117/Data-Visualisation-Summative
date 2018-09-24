@@ -67,9 +67,9 @@ type_objets_Perrache = ["Bagagerie", "Porte-monnaie","Pièces d'identités", "Ap
 type_objets_PartDieu = ["Bagagerie", "Appareils électroniques", "Porte-monnaie", "Vêtements, chaussures", "Pièces d'identités", "Optique", "Clés", "Divers", "Vélos, trotinettes", "Vélos, trottinette", "Articles d'enfants", "Articles de sport", "Parapluies", "Bijoux","Articles médicaux", "Instruments de musique"]
 
 
-type_objets_light = ["Front-end", "Back-end","Srucm Master", "UX-Design", "User Testing", "Video Editing", "Livres", "Animation", "Graphic Design"]
+type_objets_light = ["Front-end", "Back-end","Scrum Master", "UX-Design", "User Testing", "Video Editing", "Livres", "Animation", "Graphic Design"]
 
-type_objets_PartDieu_light = ["Front-end", "UX-Design", "Back-end", "User Testing", "Srucm Master", "Video Editing", "Animation", "Graphic Design"]
+type_objets_PartDieu_light = ["Front-end", "UX-Design", "Back-end", "User Testing", "Scrumm Master", "Video Editing", "Animation", "Graphic Design"]
 
 
 datasetOption1 = [
@@ -97,9 +97,12 @@ datasetOption2 = [
         {label:type_objets_PartDieu_light[7], value:dataPartDieu_sort_light[7]},
         ];
 
+
+
+
 d3.selectAll("input")
   .on("change", selectDataset);
-  
+
 function selectDataset()
 {
   change(datasetOption1);
@@ -224,6 +227,7 @@ function change(data) {
         .remove();
 };
 
+$('#dataset1').trigger('click');
 
 // donut-chart
     var width = 300,
