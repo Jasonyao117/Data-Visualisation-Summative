@@ -1,10 +1,14 @@
-#hero{
-	background: url(../img/patterns.png); 
+// #hero{
+// 	background: url(../img/patterns.png); 
 
+// }
+
+.portfolio-hover{
+	margin-top: 40px;
 }
 
 .portfolio-item{
-	height: 215px;
+	height: 250px;
 	overflow:hidden;
 
 	.portfolio-image{
@@ -21,6 +25,13 @@
 }
 
 .tab-pane.fade.show {
- 
     z-index: 10;
+}
+
+
+.icon{
+	background:transparent;
+	img{
+	border-radius: 50%;
+    }
 }

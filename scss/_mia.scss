@@ -1,6 +1,12 @@
 .main-wrap{
 	background-image: url(../background/0.png);
 }
+.section1{
+	h2{
+		font-size:$title-size;
+	}
+	
+}
 .header-text{
 	padding:0 1.5rem;
 	margin-top:-100px;
@@ -34,11 +40,10 @@
 
 				}
 			}
-			.photo{
-				border:1px $orange solid;
-			}
 			.introduction{
-
+				strong{
+					color:$dark;
+				}
 			}
 		}
 		.tab-content{
@@ -53,9 +58,15 @@
 }
 @media only screen and (min-width:50em){
 	.header-text{
+		color:$dark;
+		margin-top:20px;
 		z-index:9;
 		margin-left:200px;
+		h1{
+			color:$dark;
+		}
 		strong{
+			color:$blue;
 			font-size:$title-size;
 		}
 		p{
@@ -67,7 +78,9 @@
 		margin-left:-200px;
 		width:50%;
 		height:500px;
-		background-image: url(../background/header.jpg);
+		background-image: url(../background/0.jpg);
+		background-repeat: no-repeat;
+		background-size:cover;
 		box-shadow:8px 8px 20px 5px;
 	}
 	.section2{
