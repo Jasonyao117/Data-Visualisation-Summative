@@ -4,7 +4,7 @@
 	display: inline-block;
 	}
 	h1:first-letter{
-		color:orange;
+		color:$orange;
 		font-size:2.5em;
 		padding-right:5px;
 		text-transform:uppercase;
@@ -42,7 +42,6 @@
 			}
 
 			.toolTip {
-				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 				position: absolute;
 				display: none;
 				width: auto;
@@ -62,19 +61,35 @@
 		}
 		#barChartA{
 			flex: 0 0 50%;
-			margin-left: 8.7%;
+			margin-left: -1%;
+			text{
+				font-size:1.2em;
+				color:$dark;
+			}
 		}
 		#barChartB{
 			flex: 0 0 40%;
 			margin-left: -12%;
+			text{
+				font-size:1.2em;
+				color:$dark;
+			}
 		}
 		#barChartC{
-			flex: 0 0 50%;
-			margin-left: 8.7%;
+			flex: 0 0 40%;
+			margin-left: -12%;
+			text{
+				font-size:1.2em;
+				color:$dark;
+			}
 		}
 		#barChartD{
 			flex: 0 0 40%;
 			margin-left: -12%;
+			text{
+				font-size:1.2em;
+				color:$dark;
+			}
 		}
 
 	}
