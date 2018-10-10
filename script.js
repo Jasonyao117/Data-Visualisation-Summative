@@ -116,4 +116,28 @@ $(window).on('resize', function(){
     var marker = L.marker(center).addTo(map);
 
 
+var iwidth = width/100;
+      if (iwidth<=15.74) {
+         $('.triangle.left , .triangle.right').css({
+           width: iwidth*35,
+         });
+      }else{
+      	$('.triangle.left , .triangle.right').css({
+           width: 547.75,
+         });
+      };
+      
+      if (iwidth<=7.32){
+      	$('.triangle').hide()
+      }else{
+      	$('.triangle').show()
+      }
+
+      if(iwidth<=9.8){
+      	$('.navbar-nav>li>a').css('color','black');
+      }else{
+      	$('.navbar-nav>li>a').css('color','white');
+      }
+
 });
+
